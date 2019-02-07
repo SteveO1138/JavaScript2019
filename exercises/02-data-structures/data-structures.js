@@ -4,7 +4,7 @@
  */
 
 function createAnArray() {
-  var array = [];
+  var array = ["Cat","dog","13"];
   /*** Add three items to the array ****/
   return array;
 }
@@ -17,6 +17,7 @@ function createAnArray() {
 
 function accessingAnArray() {
   var cars = ['BMW', 'Honda', 'Civic'];
+  return cars[0];
 }
 
 /**
@@ -28,7 +29,10 @@ function accessingAnArray() {
  * highestNumber([5, 1, 2, 3, 10]) // [10]
  *
  **/
-function highestNumber(array) {}
+function highestNumber(array) {
+  for (var i=0; i < highestNumber.length; i++) {
+    console.log(highestNumber[i]);
+}
 
 /**
  * Combine an array by using the spread operator
