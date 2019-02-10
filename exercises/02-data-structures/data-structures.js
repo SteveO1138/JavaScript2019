@@ -30,9 +30,15 @@ function accessingAnArray() {
  *
  **/
 function highestNumber(array) {
-  for (var i=0; i < highestNumber.length; i++) {
-    console.log(highestNumber[i]);
-}
+
+  var numbers = 0;
+
+  for (var i = 0; i < array.length; i++) 
+  
+console.log(numbers);
+  }
+  
+
 
 /**
  * Combine an array by using the spread operator
@@ -43,7 +49,14 @@ function highestNumber(array) {
  * combineArray(['Japan','China','India'], ['USA','UK']) // ['Japan','China','India','USA','UK']
  **/
 
-function combineArray(array1, array2) {}
+function combineArray(array1, array2) {
+
+  var  newArray = [... array1, ... array2];
+
+  console.log(newArray);
+
+
+}
 
 /**
  * A palindrom is a word, phrase, or sequence that reads the same backward as forward, e.g., madam, nurses or run.
@@ -54,7 +67,11 @@ function combineArray(array1, array2) {}
  *
  */
 
-function isPalindrome(str) {}
+function isPalindrome(str) {
+
+  let s = str.toLowerCase().replace(/[\W]/g,'')
+  return s === [...s].reverse().join('')
+}
 
 /**
  * Make an object that represents a dog called myDog which contains the keys
@@ -63,7 +80,18 @@ function isPalindrome(str) {}
  * @return {object}
  */
 
-function createDogObject() {}
+function createDogObject() {
+
+  var myDog = {
+    name : 'morty',
+    legs : 'four',
+    tails : 'long',
+    owners : ['rick, jerry, sommer'],
+  };
+
+  
+  console.log(myDog);
+}
 
 /**
  * Access testObj and return the value for hat inside clothes (which should be ballcap)
@@ -77,7 +105,7 @@ function accessObject() {
   };
   // Only change code below this line
 
-  var hatValue = clothes; // Change only this line of code
+  var hatValue = clothes.hat; // Change only this line of code
 
   return hatValue;
 }
@@ -90,9 +118,9 @@ function accessObject() {
 
 function createStudentObject() {
   var student = {
-    firstname: '',
-    lastname: '',
-    skills: []
+    firstname: 'Steve',
+    lastname: 'Osuchowski',
+    skills: ["html,css,javaScript,design"]
   };
   // Only change code below this line.
 
@@ -115,6 +143,9 @@ function returnObjectProperties() {
   };
   //Add code here
   //hint you need to return an array
+  console.log(dog.tail.legs.friends.name);
+
+  console.log(dog["tail"]["legs"]["friends"]["name"]);
 }
 
 /**
@@ -124,7 +155,12 @@ function returnObjectProperties() {
  * @return {object} obj1 and obj2 combined
  */
 
-function combineObject(obj1, obj2) {}
+function combineObject(obj1, obj2) {
+  var  newObject = [... obj1, ... obj2];
+
+  console.log(newObject);
+
+}
 
 /***
  *
@@ -133,10 +169,10 @@ function combineObject(obj1, obj2) {}
 
 function removeDuplicates() {
   // Use Sets to remove duplicate elements from the array
-  var numbers = [2, 3, 4, 4, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5];
+  var numbers = new Set ([2, 3, 4, 4, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5]);
 
   /** Return the an array of unique values */
-  return;
+  console.log(numbers);
 }
 
 module.exports = {
