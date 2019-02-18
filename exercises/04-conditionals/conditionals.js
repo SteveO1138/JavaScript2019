@@ -23,6 +23,8 @@
  *   payload: 1.00
  * };
  *
+ *
+ *
  * product = updateProduct(product, action);
  * console.log(product); // { name: "toothbrush", cost: 2.99 }
  *
@@ -40,30 +42,39 @@
  * console.log(product); // { name: "shampoo", cost: 6.99 }
  */
 
-var updateProduct = (product, action) => {
-  var newProduct;
-  // Do not change above this line
+// var updateProduct = (product, action) => {
+//   var newProduct;
+//   // Do not change above this line
 
-  if (action.type === "ADD") {
-    // Use the spread operator here instead
-    newProduct = product;
-    newProduct.cost = product.cost + action.payload;
-  } else if (action.type === "MULTIPLY") {
-    // Use the spread operator here instead
-    newProduct = product;
-    newProduct.cost = product.cost * action.payload;
-  } else if (action.type === "SUBTRACT") {
-    // Use the spread operator here instead
-    newProduct = product;
-    newProduct.cost = product.cost - action.payload;
-  } else if (action.type === "DIVIDE") {
-    // Use the spread operator here instead
-    newProduct = product;
-    newProduct.cost = product.cost / action.payload;
-  } else {
-    // Use the spread operator here instead
-    newProduct = product;
-  }
+//   if (action.type === "ADD") {
+//     // Use the spread operator here instead
+//     newProduct = product;
+//     newProduct.cost = product.cost + action.payload;
+//   } else if (action.type === "MULTIPLY") {
+//     // Use the spread operator here instead
+//     newProduct = product;
+//     newProduct.cost = product.cost * action.payload;
+//   } else if (action.type === "SUBTRACT") {
+//     // Use the spread operator here instead
+//     newProduct = product;
+//     newProduct.cost = product.cost - action.payload;
+//   } else if (action.type === "DIVIDE") {
+//     // Use the spread operator here instead
+//     newProduct = product;
+//     newProduct.cost = product.cost / action.payload;
+//   } else {
+//     // Use the spread operator here instead
+//     newProduct = product;
+//   }
+
+switch(action.type){
+  case "ADD":
+   newProduct = {...product, cost: product.cost + action.playload
+   };
+   break;
+   default:
+   newProduct
+}
 
   return newProduct; // Do not change this
 };
