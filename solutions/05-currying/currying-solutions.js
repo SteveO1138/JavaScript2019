@@ -14,14 +14,9 @@
  * @param {number} b
  */
 const multiplier = (a, b) => {
-//  return (a && b) ? a * b : (b) => a * b 
-if (typeof a === 'number' && typeof b === 'number')
-    return a * b;
-  return (b) => a * b;
+  if (typeof a === "number" && typeof b === "number") return a * b;
+  return b => a * b;
 };
-
-};
-
 
 module.exports = {
   multiplier
