@@ -4,10 +4,10 @@
  * @param {array} arr
  * @param {function} callback
  */
-const forEach = (arr, callback) => 
-for (var i = 0; i < arr.length; i++){
-  callback(arr[i], i, arr);
-}
+const forEach = (arr, callback) => {
+  for (let i = 0; i < arr.length; i++) {
+    callback(arr[i], i, arr);
+  }
 };
 
 /**
@@ -20,15 +20,13 @@ for (var i = 0; i < arr.length; i++){
  */
 const showFirstAndLast = arr => {
   let newArray = [];
-arr.forEach(function(name,index){
-  let newArray = name.split('');
-  let showFirstAndLast = newArrat[0] + newArray
-    console.log(name[0])
-    //colt
-    //c
-  })
-}
-console.log ( showFirstAndLast(['colt','matt', 'tim', 'udemy']));
+  for (let item of arr) {
+    const first = item[0];
+    const last = item[item.length - 1];
+    newArray.push(`${first}${last}`);
+  }
+  return newArray;
+};
 
 module.exports = {
   forEach,

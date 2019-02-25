@@ -7,14 +7,12 @@
  */
 const map = (arr, callback) => {
 
-arr.forEach(function(callback) {
-callback =  arr * 2;
-})
+arr.forEach(callback => arr * 2 ) 
 
 };
-console.log(map[1,2,3]);
 
-/**
+
+/**ß
  * Multiplies each value in an array by two
  * @param {array} arr an array of numbers e.g. [1, 3, 5]
  * @returns {array} new array, with each value doubled e.g. [2, 5, 10]
