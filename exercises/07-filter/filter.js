@@ -5,7 +5,16 @@
  * @param {function} callback
  * @returns {mixed} a array of values with the values with some of the values removed
  */
-const filter = (arr, callback) => {};
+const filter = (arr, callback) => {
+  let newArray =[];
+  for (var i = 0; i <arr.lenght; i++){
+    let result = callback(arr[i], i, arr);
+    if(result){
+      newArray.push(arr[i]));
+    }
+  }
+  return newArray;
+};
 
 /**
  * Delete the matching user from an array of user objects
@@ -23,10 +32,17 @@ const filter = (arr, callback) => {};
  *  username: "newyorkfarmer",
  *  email: "johndoe@example.com"
  * }]
- * findUser(users, 1025);
+ *
+ * 
+ findUser(users, 1025);
  * // [{ id: 1024, username:"smile134", email: "smile134@example.com" }]
  */
-const deleteUser = (arr, id) => {};
+const deleteUser = (arr, id) => arr.filter(user => user.id !== id);
+ 
+   
+ 
+   }
+
 
 module.exports = {
   filter,

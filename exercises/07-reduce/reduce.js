@@ -6,14 +6,28 @@
  *  addItems([1,5,6]) // 12
  *  addItems([1,-2,-3]) // -4
  */
-const addItems = arr => {};
+const addItems = [1,5,6].ruduce((acc,num)=> {
+ 
+  return acc + num
+},0);
+
+console.log(addItems);
+
+
 
 /**
  * Create a function that flattens an array (that is, it should "unnest" a nested array).
  * @param {array} array e.g. `[[1, 3], [5, 10]]`
  * @returns {array} new, flattened array e.g. `[1, 3, 5, 10]`
  */
-const flattenArray = array => {};
+
+ let array = [[1, 3], [5, 10]];
+
+const flattenArray = array.reduce(function(total, amount) {
+  return total.concat(amount);
+}, []); 
+
+console.log(flattenArray);
 
 /**
  * Create a function that tallies the number of each kind of "thing" within the array
@@ -23,7 +37,13 @@ const flattenArray = array => {};
  *   var fruits = ['Apple', 'Orange', 'Apple', 'Blueberry', 'Grape', 'Grape'];
  *   generateTally(generateTally); // {Apple: 2, Orange: 1, Blueberry: 1, Grape: 2}
  */
-const generateTally = array => {};
+var fruits = ['Apple', 'Orange', 'Apple', 'Blueberry', 'Grape', 'Grape'];
+const generateTally = fruits.reduce((acc,array) => {
+     acc[array] = acc[array] ? acc[array]+= 1 : 1;
+     return acc;
+},{});
+
+console.log(generateTally);
 
 /**
  * Create a function, that when given an array of object literals, will index the object literals by a single column
@@ -47,8 +67,17 @@ const generateTally = array => {};
  *   456: {id, 456, name: 'Rachel', age: 35}
  * }
  */
-const arrayToObject = arr => {};
-
+var people = [
+    {id: 123, name: 'Dave', age: 23},
+   {id: 456, name: 'Rachel', age: 35}
+ ];
+const arrayToObject = function convertArrayToObject(array) {
+  return array.reduce(function(obj, people) {
+    obj[people.id] = people;
+    return obj;
+  }, {});
+}
+console.log(arrayToObject);
 module.exports = {
   addItems,
   generateTally,
