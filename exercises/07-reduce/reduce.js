@@ -77,7 +77,7 @@ const arrayToObject = function convertArrayToObject(array) {
     return obj;
   }, {});
 }
-console.log(arrayToObject);
+console.log(arryToObject);
 module.exports = {
   addItems,
   generateTally,
