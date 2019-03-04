@@ -6,12 +6,12 @@
  *  addItems([1,5,6]) // 12
  *  addItems([1,-2,-3]) // -4
  */
-const addItems = [1,5,6].ruduce((acc,num)=> {
+const addItems = [].reduce((acc,num)=> {
  
   return acc + num
 },0);
 
-console.log(addItems);
+console.log(addItems[1,5,6],[1,-2,-3] );
 
 
 
@@ -77,7 +77,7 @@ const arrayToObject = function convertArrayToObject(array) {
     return obj;
   }, {});
 }
-console.log(arryToObject);
+console.log(people);
 module.exports = {
   addItems,
   generateTally,
