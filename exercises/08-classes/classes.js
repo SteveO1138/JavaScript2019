@@ -13,17 +13,25 @@
  * NOTE that the linter is not up-to-date with ESNext class properties proposal,
  * meaning that you will see red squiggly lines where they do not belong.
  */
-function Calculator(startValue) {
-  let total = 0;
+class calculator{
+  num = 0;
+  total = 0;
+
+ constructor (startValue) {
+
   if (typeof startValue === "number") total = startValue;
   return {
     add: num => {
-      total += num;
+      this.total += num;
     },
     get: () => total
-  };
-}
+    
+    console.log (startValue (0,1))
+  }
+  
 
+}
+};
 /**
  * Create NewCalculator ESNext class which will extend the class Calculator.
  *
