@@ -7,19 +7,37 @@ import React, { Component } from "react";
 
 class App extends Component {
   state = {
-    showText: true
+    showText: true,
+    noShowText: false 
   };
 
-  toggle = () => {};
+  toggle = () => {
+    this.setState({
+      showText: this.state.showText
+
+    })
+      this.setState({
+         noShowText: this.state.noShowText
+    })
+  };
 
   render() {
     return (
       <div className="container pt-4">
+    
+          }}
+
         <button type="button" class="btn btn-primary btn-lg mb-2">
           Show / Hide Text
+         
+       
         </button>
-        {/* Hide the text here */}
+        <h1>Now You Dont!</h1>
         <h1>Now you see me!</h1>
+
+        
+        
+       
       </div>
     );
   }
