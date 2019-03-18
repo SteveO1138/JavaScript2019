@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import "./Address.css";
-// Import data from "assets/countries.js" and "assets/states.js" here
+import countries from "./assets/countries.js";
+import states from "./assets/states.js";
+
+/* Imp
+ort data from "assets/countries.js" and "assets/states.js" here */
 
 class Address extends Component {
   state = {
@@ -14,6 +18,7 @@ class Address extends Component {
   };
 
   render() {
+    console.log(countries)
     return (
       <form className="container mt-4">
         <div className="form-group">
