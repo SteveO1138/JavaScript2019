@@ -37,7 +37,7 @@ class App extends Component {
             </div>
           </form>
         </header>
-        <ul className="list-group">{/* Put ListItems in here */}</ul>
+        <ul className="list-group">{props.ListItem}</ul>
       </div>
     );
   }
