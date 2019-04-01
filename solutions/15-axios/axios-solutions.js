@@ -1,6 +1,5 @@
 /**
  * As a user, I should be greeted with a list of all rick and morty characters
- * As a user, I should be able to select a character from the dropdown and have that user displayed as an image
  * Helpful link for populating a dropdown
  *
  * This is the URL for the API you will be using. The method should be GET.
@@ -15,7 +14,8 @@
  */
 const populateDropDown = data => {
   $("#dropdown").empty();
-  data.forEach(p => { 
+  data.forEach(p => {
+    // This is what you need to replace
     $("#dropdown").append(
       $("<option></option>")
         .val(p.name)
@@ -23,6 +23,12 @@ const populateDropDown = data => {
     );
   });
 };
+
+/**
+ * Axios here
+ */
+
+// Method 1
 axios
   .get("https://rickandmortyapi.com/api/character")
   .then(data => populateDropDown(data.data.results))
@@ -39,7 +45,3 @@ axios({
   .catch(() => {
     throw new Error("Error");
   });
-
-/**
- * Axios here
- */
