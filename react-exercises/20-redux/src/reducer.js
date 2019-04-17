@@ -18,9 +18,7 @@ const reducer = (
         ...state,
         count: state.count + 1
       };
-    /**
-     * Add additional case statements here
-     */
+    
     default:
       return state;
   }
