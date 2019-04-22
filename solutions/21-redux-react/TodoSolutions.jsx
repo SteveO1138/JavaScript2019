@@ -24,15 +24,17 @@ class Todo extends Component {
   addTodo = e => {
     e.preventDefault();
     this.props.addTodo(this.state.userInput);
+    this.setState({
+      userInput: ""
+    });
   };
   /**
    * This will be passed down from the container as props instead
    * (but you still need to pass up the todo index)
    */
   deleteTodo = todoIndex => {
-
-      this.props.deleteTodo(todoIndex);
-    };
+    this.props.deleteTodo(todoIndex);
+  };
   render() {
     return (
       <div className="mt-4">
@@ -60,9 +62,8 @@ class Todo extends Component {
           </div>
         </form>
         <ul className="list-group">
-          {this.props.todos}
-          {console.log(this.props)}
-          {this.state.todos.map((text, index) => {
+          {/* The todos will be passed down as props */}
+          {this.props.todos.map((text, index) => {
             const key = `todo-item-${index}`;
             return (
               <ListItem
