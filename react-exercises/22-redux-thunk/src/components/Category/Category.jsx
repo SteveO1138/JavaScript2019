@@ -42,7 +42,7 @@ function Category(props) {
               <Nominee
                 key={key}
                 nominee={nominee}
-                onClick={/* Replace null with function */ null}
+                onClick={}
                 isSelected={isSelected}
               />
             );

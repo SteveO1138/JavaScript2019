@@ -9,9 +9,11 @@ import { voteRequest } from "../services/api";
  */
 
 const ajaxSuccess = (categoryId, nomineeIndex) => {
-  /**
-   * Complete this function
-   */
+  return {
+    type: voteRequest
+    
+  }
+  
 };
 
 export const vote = (categoryId, nomineeIndex) => {
